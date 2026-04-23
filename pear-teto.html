@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLAN Designer</title>
+
+<link rel="icon" type="image/x-icon" href="./ip-address.png">
+<link rel="stylesheet" href="./pear-teto.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>VLAN Designer (Subnet Personalizzate)</h1>
+
+<div class="controls">
+
+<div class="inputBox">
+<label>Numero VLAN</label>
+<input type="number" id="numVlan" min="1">
+</div>
+
+<button onclick="creaTabellaManuale()">Crea Tabella</button>
+<button onclick="aggiungiRiga()">+1 VLAN</button>
+<button onclick="rimuoviUltimaRiga()">-1 VLAN</button>
+<button onclick="calcolaManuale()">Calcola</button>
+
+</div>
+
+<div id="erroreBox"></div>
+
+<table>
+<thead>
+<tr>
+<th>Network</th>
+<th>Mask</th>
+<th>Primo IP</th>
+<th>Ultimo IP</th>
+<th>Broadcast</th>
+<th>Range</th>
+</tr>
+</thead>
+
+<tbody id="tabellaManuale"></tbody>
+
+</table>
+
+</div>
+
+<script src="./teto-pear.js"></script>
+
+<footer style="text-align:center;margin-top:30px;padding:15px;color:#94a3b8;">
+<a href="./index.html" style="color:#3b82f6;text-decoration:none;">
+Vai al VLSM IPv4 Calculator →
+</a>
+
+</body>
+</html>

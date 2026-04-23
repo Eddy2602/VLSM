@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VLSM IPv4 Calculator</title>
+<link rel="icon" type="image/x-icon" href="./ip-address.png">
+<link rel="stylesheet" href="./style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>VLSM IPv4 Calculator</h1>
+
+<div class="controls">
+
+<div class="inputBox">
+<label>IP di rete</label>
+<input type="text" id="baseIP" placeholder="192.168.1.0">
+</div>
+
+<div class="inputBox">
+<label>Numero reti</label>
+<input type="number" id="HostNumber" min="1">
+</div>
+
+<button onclick="creaTabella()">Crea Tabella</button>
+<button onclick="calcolaVLSM()">Calcola</button>
+
+</div>
+
+<div class="tableContainer">
+
+<table>
+<thead>
+<tr>
+<th>Host</th>
+<th>Effettivi</th>
+<th>Bit</th>
+<th>Totali</th>
+<th>Mask</th>
+<th>Network</th>
+<th>Primo</th>
+<th>Ultimo</th>
+<th>Broadcast</th>
+<th>Range</th>
+</tr>
+</thead>
+
+<tbody id="tabellaHost"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<div class="chartBox">
+<canvas id="reteChart"></canvas>
+</div>
+
+<script src="./script.js"></script>
+
+<footer style="text-align:center;margin-top:30px;padding:15px;color:#94a3b8;">
+<a href="./pear-teto.html" style="color:#3b82f6;text-decoration:none;">
+Vai al VLAN Designer →
+</a>
+
+</footer>
+</body>
+</html>
